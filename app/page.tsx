@@ -2,6 +2,8 @@
 
 import { useRouter } from "next/navigation";
 import supabase from "@/lib/supabase-browser";
+import Link from "next/link";
+import { useState } from "react";
 export default function Login() {
   const router = useRouter();
 
@@ -34,6 +36,7 @@ export default function Login() {
       <button onClick={handleSignUp}>Sign up</button>
       <button onClick={handleSignIn}>Sign in</button>
       <button onClick={handleSignOut}>Sign out</button>
+      <Link href="/products">Home</Link>
     </div>
   );
 }
