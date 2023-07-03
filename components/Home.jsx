@@ -2,11 +2,20 @@
 
 import React from "react";
 
-const Home = ({ insertData }) => {
+const Home = ({ insertData, updateData }) => {
   const Hello = () => {
     insertData();
   };
-  return <div onClick={Hello}>Home</div>;
+
+  const onUpdate = () => {
+    updateData();
+  };
+  return (
+    <>
+      <div onClick={Hello}>Insert</div>
+      <div onClick={onUpdate}>Update</div>
+    </>
+  );
 };
 
 export default Home;

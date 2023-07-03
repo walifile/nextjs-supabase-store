@@ -14,12 +14,23 @@ const Products = async () => {
         client_id: "917ea60f-b6e9-4e13-9237-b7e3ca833f1f",
       })
       .select();
-    console.log(data, "insert data");
+    // console.log(data, "insert data");
+  };
+  const updateData = async () => {
+    "use server";
+    const { data, error } = await supabase
+      .from("products")
+      .update({
+        price: 70,
+      })
+      .eq("id", "6a728cd5-fc2d-431d-b64e-d59634674bc6");
+    console.log(data, "update data");
+    console.log(error, "update error");
   };
   return (
     <div>
       <p>dfsdf</p>
-      <Home insertData={insertData} />
+      <Home insertData={insertData} updateData={updateData} />
     </div>
   );
 };
