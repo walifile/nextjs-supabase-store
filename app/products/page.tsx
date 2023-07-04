@@ -2,7 +2,7 @@ import supabase from "@/lib/supabase-server";
 import Home from "@/components/Home";
 const Products = async () => {
   const { data: products } = await supabase.from("products").select("* ");
-  console.log(products, "products aaaaaaaaaaaaaaaaaaaaaaaaa");
+  // console.log(products, "products aaaaaaaaaaaaaaaaaaaaaaaaa");
 
   const insertData = async () => {
     "use server";
