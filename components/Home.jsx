@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import React from "react";
 
 const Home = ({ insertData, updateData, deleteData }) => {
@@ -18,6 +19,7 @@ const Home = ({ insertData, updateData, deleteData }) => {
       <div onClick={Hello}>Insert</div>
       <div onClick={onUpdate}>Update</div>
       <div onClick={onDelete}>Delete</div>
+      <Link href="/">Home</Link>
     </>
   );
 };
